@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h1>Jogo da Velha</h1>
+    <div id="tabuleiro">
+        <!-- Espaços para cada célula do tabuleiro -->
+        {% for i in range(9) %}
+            <button class="celula" data-pos="{{ i + 1 }}"></button>
+        {% endfor %}
+    </div>
+    <button id="reiniciar">Reiniciar Jogo</button>
+    <p id="mensagem"></p>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
