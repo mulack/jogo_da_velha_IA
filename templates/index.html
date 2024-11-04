@@ -1,22 +1,18 @@
-<!-- templates/index.html -->
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Jogo da Velha</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+  <meta charset="UTF-8">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Jogo da Velha</h1>
-    <div id="tabuleiro">
-        <!-- Espaços para cada célula do tabuleiro -->
-        {% for i in range(9) %}
-            <button class="celula" data-pos="{{ i + 1 }}"></button>
-        {% endfor %}
-    </div>
-    <button id="reiniciar">Reiniciar Jogo</button>
-    <p id="mensagem"></p>
-    <script src="../static/js/script.js"></script>
+  <h1>Jogo da Velha</h1>
+  <div id="tabuleiro">
+    <!-- Botões de 1 a 9 para as jogadas -->
+    <button onclick="fazerJogada(0)">1</button>
+    <button onclick="fazerJogada(1)">2</button>
+    <!-- ... Adicione os botões até 9 -->
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
