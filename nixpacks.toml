@@ -1,5 +1,6 @@
-[phases]
-  setup = "pip install -r requerimentos.txt"
+[[phases.setup]]
+commands = ["pip install -r requerimentos.txt"]
 
 [variables]
-  PORT = "8080"
+PORT = "8080"
+
