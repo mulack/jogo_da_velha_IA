@@ -1,0 +1,5 @@
+[phases]
+  setup = "pip install -r requerimentos.txt"
+
+[variables]
+  PORT = "8080"
